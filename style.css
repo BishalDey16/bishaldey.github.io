@@ -65,7 +65,7 @@ header{
   cursor:pointer;
 }
 
-/* Sections */
+/* Section layout */
 .section{
   min-height:100vh;
   position:relative;
@@ -73,10 +73,10 @@ header{
   align-items:center;
   justify-content:center;
   padding:60px 20px;
-  transition: transform 0.6s cubic-bezier(.2,.9,.3,1);
+  transition: background 0.6s ease-in-out, transform 0.6s cubic-bezier(.2,.9,.3,1);
 }
 
-/* card */
+/* Card */
 .card{
   width:var(--card-w);
   max-width:88%;
@@ -94,7 +94,7 @@ header{
 }
 .card.show{opacity:1; transform: translateX(0);}
 
-/* image */
+/* Character images */
 .char-img{
   position:absolute;
   right:6%;
@@ -110,12 +110,58 @@ header{
 }
 .char-img.show{opacity:1;}
 
-/* responsive */
+/* Responsive */
 @media (max-width:760px){
   .char-img{left:50%; top:34%; transform:translate(-50%,-10%); width:58vmin}
   .card{position:relative;margin-top:260px;background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.22));}
   header{padding:0 8px}
 }
 
-/* footer */
-footer{padding:26px 10px;text-align:center;color:rgba(255,255,255,0.8);font-size:13px;}
+/* Footer */
+footer{
+  padding:26px 10px;
+  text-align:center;
+  color:rgba(255,255,255,0.8);
+  font-size:13px;
+}
+
+/* -------------------------------------------------- */
+/*        CHARACTER SPECIFIC BACKGROUND COLORS         */
+/* -------------------------------------------------- */
+
+/* Naruto - Yellow */
+.section[data-name="Naruto"]{
+  background: linear-gradient(135deg, #fbd21f, #ffae00);
+}
+
+/* Ichigo - Orange-Red */
+.section[data-name="Ichigo"]{
+  background: linear-gradient(135deg, #ff5722, #c62828);
+}
+
+/* Sung Jinwoo - Dark Blue */
+.section[data-name="Sung Jinwoo"]{
+  background: linear-gradient(135deg, #0a1a3c, #020b18);
+}
+
+/* Itachi - Black/Red */
+.section[data-name="Itachi"]{
+  background: linear-gradient(135deg, #1c1c1c, #3e0000);
+}
+
+/* Zenitsu - Bright Yellow */
+.section[data-name="Zenitsu"]{
+  background: linear-gradient(135deg, #ffe066, #f5b400);
+  color:#000;
+}
+
+/* Light Yagami - Dark Red */
+.section[data-name="Light"]{
+  background: linear-gradient(135deg, #8b0000, #4b0000);
+}
+
+/* Killua - Light Blue */
+.section[data-name="Killua"]{
+  background: linear-gradient(135deg, #6ec6ff, #2962ff);
+}
+
